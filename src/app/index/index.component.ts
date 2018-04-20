@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 @Component({
-  selector: 'app-index',
-  templateUrl: './index.component.html',
-  styleUrls: ['./index.component.css']
+	selector: 'app-index',
+	templateUrl: './index.component.html',
+	styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit {
 
-  constructor(private http: HttpClient) { }
+	constructor(private http: HttpClient) { }
 
-  ngOnInit() {
-
- 	 console.log(this.http.get('/getVal.php'));
-
-  }
-
+	ngOnInit() {
+		this.http.get('/getVal.php').subscribe(
+			data => {
+				console.log(data);
+			});
+	}
 }
