@@ -22,4 +22,8 @@ describe('DashboardComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('say hello', () => {
+    expect(component.sayHello()).toEqual('hello');
+  });
 });

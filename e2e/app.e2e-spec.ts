@@ -7,8 +7,13 @@ describe('small-admin-panel App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
-    page.navigateTo();
-    expect(page.getParagraphText()).toEqual('dashboard works!');
+  it('should navigate to dashboard', () => {
+    page.navigateToHome();
+    expect(page.getParagraphText('p')).toEqual('dashboard works!');
+  });
+
+   it('should navigate to index', () => {
+    page.navigateToIndex();
+    expect(page.getParagraphText('button')).toEqual('Button');
   });
 });
