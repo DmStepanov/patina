@@ -8,15 +8,15 @@ import { IndexComponent }      from './index/index.component';
 
 
 const routes: Routes = [
-	{ path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-	{ path: 'dashboard', component: DashboardComponent },
-	{ path: 'pages', component: PagesComponent },
-	{ path: 'uploads', component: UploadsComponent },
-	{ path: 'index', component: IndexComponent }
+	{ path: '', redirectTo: '/', pathMatch: 'full' },
+	{ path: 'dashboard'	, component: DashboardComponent },
+	{ path: 'pages'		, component: PagesComponent },
+	{ path: 'uploads'	, component: UploadsComponent },
+	{ path: 'index'		, component: IndexComponent }
 ];
 
 @NgModule({
   imports: [ RouterModule.forRoot(routes) ],
   exports: [ RouterModule ]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

@@ -1,4 +1,10 @@
 <div class="container-fluid h-100">
-<div class="row h-90"><textarea class="form-control h-100" id="exampleTextarea" rows="3"></textarea></div>
-<div class="row sticky-top"><div class="col-6 col-md-4 col-lg-2 col-xl-3"><button class="btn btn-primary btn-block" type="submit">Button</button></div>
+	<div class="row h-75">
+		<textarea class="form-control h-100" id="exampleTextarea" rows="3" [(ngModel)] = 'rapidPage'></textarea>
+	</div>
+	<div class="row sticky-top">
+		<div class="col-6 col-md-4 col-lg-2 col-xl-3">
+			<button class="btn btn-primary btn-block" type="submit" (click) = "saveDev()">Button</button>
+		</div>
+	</div>
 </div>
